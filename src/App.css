@@ -1,0 +1,18 @@
+/* App.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  height: auto; /* Set to viewport height */
+  width: 100vw; /* Set to viewport height */
+  overflow: hidden;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}

@@ -1,0 +1,22 @@
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Place canvas behind other content */
+    pointer-events: none; /* Disable pointer events on canvas */
+}
+
+/* Custom cursor for magnifying effect */
+.custom-cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: /*rgba(0, 0, 0, 0.945)*/ white; /* Dark background for contrast */
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}

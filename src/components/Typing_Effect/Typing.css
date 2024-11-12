@@ -1,0 +1,30 @@
+/* TypingEffect.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.typing-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.typing-effect {
+    color: #00ff66;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Press Start 2P', monospace;
+}
+
+/* Smooth color transition */
+.typed-text {
+    transition: color 1s ease;
+}
+
+.typing-effect {
+    font-family: 'Press Start 2P', monospace;
+}

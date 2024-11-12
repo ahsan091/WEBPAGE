@@ -1,0 +1,27 @@
+/* Center the logo on the page */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px; /* Adds depth to the 3D effect */
+    background: none;
+}
+
+/* 3D Rotation Animation */
+@keyframes rotate3D {
+    0% { transform: rotateY(0deg) rotateX(0deg); }
+    50% { transform: rotateY(180deg) rotateX(180deg); }
+    100% { transform: rotateY(360deg) rotateX(360deg); }
+}
+
+/* Apply the animation to the logo */
+.animated-logo {
+    animation: rotate3D 5s infinite linear;
+    transform-style: preserve-3d;
+    width: 350px;
+    height: auto;
+}

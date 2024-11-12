@@ -1,0 +1,76 @@
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Fixed position at the top */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border: 2px solid #32d400;
+    border-radius: 50px;
+    background-color: black;
+    z-index: 10;
+  }
+  
+  /* The sliding background effect */
+  .sliding-bg {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    padding-left: 10px; /* Add padding to both sides */
+    padding-right: 10px;
+    background-color: #12913e;
+    border-radius: 50px;
+    transform: translateX(-50%) translateY(-50%); /* Center both vertically and horizontally */
+    opacity: 0; /* Initially hidden */
+    transition: left 0.2s ease, width 0.2s ease, opacity 0.2s ease;
+    z-index: -1;
+  }
+  
+  /* Navbar links */
+  .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    cursor: none;
+  }
+  
+  /* Navbar text */
+  .linktext {
+    position: relative;
+    z-index: 1; /* Higher z-index so it stays above the sliding-bg */
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .item:hover .linktext {
+    color: #000; /* Optional: Change text color on hover for contrast */
+  }
+  
+  /* Navbar items to create focused view */
+  .navbar .item .linktext {
+      font-size: 0.9rem;
+      transition: transform 0.2s ease;
+  }
+  
+  .navbar .item:hover .linktext {
+      transform: scale(1.3); /* Scale up text under cursor for magnified effect */
+      color: white; /* Change color to match the magnified style */
+  }
+
+/* Updated custom cursor styling for clearer text visibility */
+.custom-cursor.magnify {
+  width: 80px; /* Larger size */
+  height: 80px;
+  background-color: transparent; /* Semi-transparent black for magnifier effect */
+  transform: scale(1.3);
+  border-radius: 50%; /* Optional: keeps the cursor circular */
+  backdrop-filter: brightness(1.3); /* Increases brightness to make text clearer */
+  border: 3px solid white;
+}
